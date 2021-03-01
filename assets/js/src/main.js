@@ -9,12 +9,12 @@ const getPokemon = () => {
             fetch(data.results[i].url)
                 .then((res) => res.json())
                 .then((data) => {
+                    let id = data.id;
+                    let img = data.sprites.other.dream_world.front_default;
                     let name = data.name;
                     let weight = data.weight;
                     let height = data.height;
-                    let id = data.id;
                     let type = data.types[0].type.name;
-                    let img = data.sprites.other.dream_world.front_default;
                     var card = document.createElement("article");
                     card.classList.add('pokemon-card');
                     card.innerHTML = 
