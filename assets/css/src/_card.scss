@@ -1,0 +1,64 @@
+body {
+    background: center url(../../photos/pokemon-1577763_1920.jpg);
+    background-size: contain;
+    header#main-header{
+        font-size: 5em;
+        background-color: rgb(207, 159, 159);
+        padding: 20px;
+        text-align: center;
+    }  
+} 
+section#pokedex {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    max-width: 1600px;
+    margin: auto;
+    article.pokemon-card {
+        grid-column: span 3;
+        background-color: rgb(105, 124, 124);
+        max-width: 500px;
+        padding: 20px;
+        position: relative;
+        header.header-card {
+            text-align: center;
+            background-color: rgb(207, 159, 159);
+            padding: 10px;
+            h2.name {
+                font-size: 3em;
+            }
+            h3.id {
+                font-size: 2em;
+            }
+        }
+        .body-card img {
+            width: 100%;
+            text-align: center;
+            max-width: 250px;
+            max-height: 400px;
+        }
+        footer.footer-card {
+            background-color: rgb(207, 159, 159);
+            padding: 20px;
+            h3 {
+                font-size: 2em;
+                text-align: center;
+            }
+        }   
+    }
+}
+@media screen and (max-width: 998px){
+    section#pokedex {
+        article.pokemon-card {
+            grid-column: span 6;
+        }
+    }
+}
+@media screen and (max-width: 568px){
+    section#pokedex {
+        article.pokemon-card {
+            grid-column: span 12;
+            margin: auto;
+        }
+    }
+}
